@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#f7f3ed" />
+<title>拾色｜找到你的个人风格</title>
+<style>
+:root{--bg:#f7f3ed;--paper:#fffdf9;--ink:#292923;--muted:#77756e;--line:#e7e0d6;--rose:#b77c72;--olive:#747c62;--sand:#e9dfd1;--shadow:0 18px 50px rgba(53,42,29,.08)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;line-height:1.65}button,input{font:inherit}button{cursor:pointer}.shell{max-width:1120px;margin:auto;padding:0 24px}.nav{height:78px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(80,70,55,.1)}.brand{display:flex;align-items:center;gap:10px;font-weight:750;letter-spacing:.12em;font-size:19px}.brand-mark{width:31px;height:31px;border-radius:50% 50% 45% 55%;background:linear-gradient(135deg,#d6a39a,#858d72);display:grid;place-items:center;color:#fff;font-size:15px}.nav-note{font-size:12px;color:var(--muted);letter-spacing:.06em}.hero{display:grid;grid-template-columns:1.05fr .95fr;gap:50px;align-items:center;padding:64px 0 58px}.eyebrow{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--rose);font-weight:700}.hero h1{font-family:"Songti SC",STSong,serif;font-weight:500;font-size:clamp(40px,5vw,64px);line-height:1.18;letter-spacing:-.04em;margin:18px 0}.hero h1 em{font-style:normal;color:var(--rose)}.hero p{color:var(--muted);max-width:460px;font-size:15px}.hero-actions{display:flex;align-items:center;gap:16px;margin-top:28px;flex-wrap:wrap}.primary{border:0;border-radius:999px;background:var(--ink);color:#fff;padding:14px 24px;font-weight:650;transition:.2s}.primary:hover{background:#4b4b40;transform:translateY(-1px)}.secondary{border:1px solid var(--line);background:transparent;border-radius:999px;padding:13px 20px;color:var(--ink)}.tiny{font-size:12px;color:var(--muted)}.hero-art{position:relative;min-height:390px;border-radius:48% 48% 18px 18px;background:#e7d8c9;overflow:hidden;display:flex;align-items:center;justify-content:center}.hero-art:before{content:"";position:absolute;width:260px;height:330px;background:#c7a69a;border-radius:48% 48% 10px 10px;top:40px;left:calc(50% - 130px);transform:rotate(-5deg)}.hero-art:after{content:"";position:absolute;width:180px;height:250px;background:#8a927b;border-radius:48% 48% 8px 8px;top:96px;left:calc(50% + 24px);transform:rotate(12deg);mix-blend-mode:multiply;opacity:.78}.art-label{position:absolute;z-index:2;left:24px;bottom:22px;background:rgba(255,253,249,.88);backdrop-filter:blur(8px);border-radius:12px;padding:12px 15px;font-size:12px}.art-label strong{display:block;font-size:14px}.swatches{position:absolute;z-index:3;right:20px;top:24px;display:flex;gap:6px;flex-direction:column}.swatch{width:30px;height:30px;border:3px solid rgba(255,255,255,.65);border-radius:50%;box-shadow:0 2px 8px #0001}.section{padding:44px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:20px;margin-bottom:24px}.section h2{font-family:"Songti SC",STSong,serif;font-size:31px;font-weight:500;margin:6px 0}.section-head p{margin:0;color:var(--muted);font-size:13px}.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.step-card{padding:22px;border:1px solid var(--line);border-radius:18px;background:rgba(255,253,249,.55)}.step-num{font-size:11px;color:var(--rose);letter-spacing:.12em}.step-card h3{font-size:16px;margin:9px 0 5px}.step-card p{font-size:13px;color:var(--muted);margin:0}.app-panel{background:var(--paper);border:1px solid var(--line);border-radius:26px;box-shadow:var(--shadow);overflow:hidden}.panel-top{padding:25px 30px 19px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;gap:15px}.panel-top h2{font-family:"Songti SC",STSong,serif;font-weight:500;font-size:25px;margin:0}.progress-wrap{height:4px;background:#eee8df}.progress{height:4px;width:25%;background:var(--rose);transition:width .3s}.panel-body{padding:30px}.step-view{display:none}.step-view.active{display:block;animation:fade .3s ease}@keyframes fade{from{opacity:.3;transform:translateY(4px)}to{opacity:1;transform:none}}.step-intro{margin:0 0 22px;color:var(--muted);font-size:14px}.upload-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.upload-box{border:1.5px dashed #d8cfc2;border-radius:18px;min-height:210px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;background:#fbf8f3}.upload-box input{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%;height:100%;z-index:3}.upload-content{text-align:center;padding:20px;pointer-events:none}.upload-icon{width:45px;height:45px;margin:0 auto 10px;border-radius:50%;background:#efe6dc;display:grid;place-items:center;font-size:22px}.upload-content strong{display:block;font-size:14px}.upload-content span{font-size:12px;color:var(--muted)}.preview{display:none;position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.upload-box.has-image .preview{display:block}.upload-box.has-image .upload-content{position:absolute;bottom:8px;left:8px;right:8px;background:#fffdf0dd;border-radius:10px;padding:8px;z-index:2}.upload-box.has-image .upload-icon,.upload-box.has-image .upload-content span{display:none}.privacy-note{display:flex;gap:9px;align-items:start;padding:13px 15px;background:#f6f1e9;border-radius:12px;color:#6e6b62;font-size:12px;margin-top:16px}.field-label{display:block;font-weight:650;margin:23px 0 10px;font-size:14px}.options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.options.three{grid-template-columns:repeat(3,minmax(0,1fr))}.option{border:1px solid var(--line);border-radius:13px;padding:13px 14px;background:#fffdf9;text-align:left;color:var(--ink);transition:.18s;min-height:52px}.option small{display:block;color:var(--muted);font-size:11px;margin-top:3px}.option:hover{border-color:#c7a59a}.option.selected{background:#f4e8e2;border-color:var(--rose);box-shadow:inset 0 0 0 1px var(--rose)}.option.selected:before{content:"✓  ";color:var(--rose);font-weight:800}.form-foot{display:flex;justify-content:space-between;align-items:center;margin-top:30px;gap:12px}.form-foot .right{display:flex;gap:10px}.error{color:#a14f43;font-size:12px;display:none;margin-top:10px}.result{display:none}.result.active{display:block;animation:fade .35s ease}.result-hero{display:grid;grid-template-columns:1fr 1fr;gap:20px}.result-card{border-radius:18px;background:#f5eee5;padding:23px}.result-card.dark{background:#30352e;color:#fff}.result-card .overline{font-size:11px;letter-spacing:.14em;text-transform:uppercase;opacity:.7}.result-card h3{font-family:"Songti SC",STSong,serif;font-weight:500;font-size:28px;line-height:1.25;margin:10px 0}.result-card p{font-size:13px;opacity:.8}.chips{display:flex;gap:7px;flex-wrap:wrap;margin-top:16px}.chip{border-radius:999px;padding:6px 10px;font-size:11px;background:#fffaf3;color:#605c52}.dark .chip{background:#4b5148;color:#fff}.palette{display:flex;gap:8px;margin:17px 0 8px}.color-item{flex:1;min-width:0}.color-dot{height:70px;border-radius:11px}.color-name{font-size:11px;color:var(--muted);margin-top:6px;text-align:center}.report-section{margin-top:22px;border:1px solid var(--line);border-radius:17px;padding:21px}.report-section h4{margin:0 0 12px;font-size:15px}.report-section p,.report-section li{font-size:13px;color:#65635c}.report-section ul{padding-left:20px;margin:8px 0}.outfits{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.outfit{border-radius:13px;padding:15px;background:#f4eee5}.outfit .emoji{font-size:24px}.outfit strong{display:block;font-size:13px;margin:7px 0}.outfit p{font-size:12px;margin:0}.result-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}.footer{padding:35px 0 45px;color:var(--muted);font-size:12px;border-top:1px solid var(--line);margin-top:60px}.footer-inner{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.hidden{display:none!important}
+@media(max-width:760px){.shell{padding:0 16px}.nav{height:65px}.hero{grid-template-columns:1fr;gap:26px;padding:42px 0}.hero-art{min-height:285px;max-width:480px;width:100%;margin:auto}.hero-art:before{height:245px;width:195px;left:calc(50% - 100px);top:28px}.hero-art:after{height:185px;width:135px;left:calc(50% + 15px);top:70px}.steps{grid-template-columns:1fr}.step-card{padding:17px}.section{padding:30px 0}.section h2{font-size:27px}.panel-top{padding:20px}.panel-body{padding:20px 16px}.upload-grid{grid-template-columns:1fr}.upload-box{min-height:185px}.options.three{grid-template-columns:repeat(2,minmax(0,1fr))}.result-hero{grid-template-columns:1fr}.outfits{grid-template-columns:1fr}.color-dot{height:55px}.nav-note{font-size:10px}}
+
+/* Report v2: structured, evidence-aware personal color and style report */
+.report-cover{background:linear-gradient(145deg,#f1eee8,#e5e7e2 55%,#d8dce2);border-radius:22px;padding:28px 22px;text-align:center;margin-bottom:18px;position:relative;overflow:hidden}
+.report-cover:before{content:"";position:absolute;width:190px;height:190px;border-radius:50%;background:#ffffff66;top:-80px;right:-40px}
+.report-avatar{width:84px;height:84px;border-radius:50%;object-fit:cover;border:4px solid #fff;box-shadow:0 8px 24px #00000014;margin:0 auto 14px;display:none}
+.report-cover .overline{font-size:11px;letter-spacing:.16em;color:#77796f;font-weight:700}
+.report-cover h3{font-family:"Songti SC",STSong,serif;font-size:34px;line-height:1.2;margin:10px 0 4px;font-weight:600;position:relative}
+.report-en{font-size:14px;color:#73766f;letter-spacing:.03em}
+.report-badge{display:inline-block;border-radius:999px;padding:7px 14px;background:linear-gradient(100deg,#b6b294,#939eaa);color:white;font-size:12px;margin:13px 0 8px}
+.report-summary{max-width:620px;margin:0 auto;color:#65675f;font-size:14px;position:relative}
+.report-meta{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-top:15px}
+.report-meta span{font-size:11px;border:1px solid #ffffffb5;background:#ffffff80;border-radius:999px;padding:5px 9px;color:#676960}
+.report-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px}
+.report-tile{border:1px solid var(--line);border-radius:17px;padding:18px;background:#fffdf9}
+.report-tile h4{font-size:15px;margin:0 0 7px}
+.report-tile p{font-size:12px;color:var(--muted);margin:0}
+.dimension-list{display:grid;gap:13px;margin-top:14px}
+.dimension-row{display:grid;grid-template-columns:82px 1fr 54px;gap:9px;align-items:center;font-size:12px}
+.dimension-track{height:7px;border-radius:99px;background:#eeeae3;overflow:hidden}
+.dimension-fill{height:100%;width:var(--w,50%);border-radius:99px;background:linear-gradient(90deg,#b8b69c,#8f9ba9)}
+.dimension-val{text-align:right;color:#85867e;font-size:11px}
+.color-strip{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px;margin:15px 0 7px}
+.color-swatch{overflow:hidden;border-radius:12px;background:white;border:1px solid #eee9e1}
+.color-swatch .block{height:76px}
+.color-swatch .label{padding:7px 4px;font-size:11px;text-align:center;color:#56564f}
+.color-advice-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.color-advice{border-radius:14px;padding:14px;background:#f5f2ed}
+.color-advice h5{margin:0 0 9px;font-size:13px}
+.color-advice p{margin:0;font-size:12px;color:#6e6b63}
+.color-dots{display:flex;gap:7px;flex-wrap:wrap;margin:8px 0}
+.color-dot-small{width:28px;height:28px;border-radius:50%;border:2px solid #fff;box-shadow:0 0 0 1px #ddd8cf}
+.evidence-list{display:grid;gap:10px}
+.evidence-item{display:flex;gap:10px;align-items:flex-start}
+.evidence-icon{width:27px;height:27px;flex:0 0 27px;border-radius:50%;display:grid;place-items:center;background:#eeece3;color:#777765;font-size:13px}
+.evidence-item strong{font-size:13px;display:block}
+.evidence-item p{margin:2px 0 0;font-size:12px;color:var(--muted)}
+.report-section .section-kicker{font-size:10px;letter-spacing:.14em;color:#a07f72;font-weight:700;margin-bottom:5px}
+.confidence-note{padding:12px 14px;border-radius:12px;background:#f4f0e8;color:#6f6b60;font-size:12px;margin-top:12px}
+@media(max-width:650px){.report-grid{grid-template-columns:1fr}.color-strip{gap:5px}.color-swatch .block{height:62px}.color-swatch .label{font-size:10px}.color-advice-grid{grid-template-columns:1fr}.dimension-row{grid-template-columns:72px 1fr 46px}.report-cover{padding:24px 16px}}
+
+
+/* V3.1 — cohesive editorial report styling inspired by the Asian-model reference */
+#result.active{display:block;max-width:100%;overflow:hidden}
+#result .report-cover{background:linear-gradient(145deg,#f0ede7 0%,#e5e7e5 54%,#d9dfe7 100%);border:1px solid #e2ded7;border-radius:18px;padding:24px 20px 20px;text-align:left;box-shadow:0 8px 24px #3c3a3210}
+#result .report-cover .overline{font-size:9px;letter-spacing:.19em;color:#77776f}
+#result .report-cover h3{font-family:"Songti SC","Noto Serif CJK SC",serif;font-size:clamp(25px,6vw,35px);line-height:1.3;color:#343a48;margin:18px 0 7px}
+#result .report-cover h3 #styleTitle{font-size:.82em;color:#606b83}
+#result .report-en{font-family:Georgia,serif;font-size:12px;letter-spacing:.12em;color:#727787}
+#result .report-badge{background:#a4a8b7;color:#fff;letter-spacing:.08em;font-size:11px;padding:6px 12px;margin:12px 0 10px}
+#result .report-summary{font-family:"Songti SC",serif;line-height:1.9;font-size:13px;color:#62646a;margin:0;max-width:560px}
+#result .report-meta{justify-content:flex-start;margin-top:14px}
+#result .report-meta span{background:#ffffff9c;border-color:#ffffffbd;color:#686b72}
+#result .report-avatar{width:94px;height:112px;border-radius:48% 48% 42% 42%;object-fit:cover;float:right;margin:0 0 10px 14px;border:3px solid #fff;box-shadow:0 5px 18px #00000012}
+#result .report-grid{gap:12px;margin:12px 0}
+#result .report-tile{background:#fffdfa;border:1px solid #e7e2da;border-radius:15px;padding:16px;box-shadow:0 3px 14px #514b4010;min-width:0}
+#result .report-section{background:#fffdfa;border:1px solid #e7e2da;border-radius:15px;padding:17px 16px;margin:12px 0;box-shadow:0 3px 14px #514b4008;min-width:0}
+#result .report-section .section-kicker,#result .report-tile .section-kicker{font-family:Georgia,serif;font-size:9px;letter-spacing:.16em;color:#a18b82;font-weight:600;margin-bottom:7px}
+#result .report-section h4,#result .report-tile h4{font-family:"Songti SC","Noto Serif CJK SC",serif;font-size:19px;line-height:1.45;font-weight:600;color:#333641;margin:0 0 8px}
+#result .report-section>p,#result .report-tile>p{font-size:12px;line-height:1.85;color:#7a7a78;margin:0 0 12px}
+#result .chips{display:flex;flex-wrap:wrap;gap:6px}
+#result .chip{background:#eeebed!important;border:1px solid #e6e1e3;border-radius:999px;color:#64616a;padding:6px 10px;font-size:11px}
+#result .confidence-note{background:#f1efeb;border-left:3px solid #b7b4a8;border-radius:0 9px 9px 0;color:#74716c;line-height:1.75}
+#result .dimension-list{gap:15px;margin-top:16px}
+#result .dimension-row{grid-template-columns:72px minmax(30px,1fr) 64px;gap:8px;color:#676970}
+#result .dimension-track{height:6px;background:#efede9}
+#result .dimension-fill{background:linear-gradient(90deg,#c7c3c0,#8d9aaf)}
+#result .dimension-val{font-size:10px;white-space:nowrap}
+#result .color-strip{gap:7px;margin:14px 0 4px}
+#result .color-swatch{border:1px solid #ebe6df;border-radius:9px;background:#fff;min-width:0}
+#result .color-swatch .block{height:62px}
+#result .color-swatch .label{font-size:10px;line-height:1.4;color:#66656a;padding:7px 3px;min-height:28px}
+#result .color-advice-grid{gap:10px}
+#result .color-advice{background:#f4f1ed;border:1px solid #eee8e1;border-radius:12px;padding:12px}
+#result .color-advice h5{font-family:"Songti SC",serif;font-size:14px;color:#42434a}
+#result .color-advice p{line-height:1.8;color:#77736e}
+#result .color-dot-small{box-shadow:0 0 0 1px #ffffff,0 0 0 2px #ded9d1;width:25px;height:25px}
+#result .evidence-list{gap:13px}
+#result .evidence-icon{background:#eeece7;color:#7f8290}
+#result .evidence-item strong{font-size:12px;color:#45464c}
+#result .evidence-item p{font-size:11px;line-height:1.7;color:#7d7a75}
+#result #itemsList{padding-left:20px;margin:8px 0 0}
+#result #itemsList li{padding:5px 0;color:#62636a;font-size:12px;line-height:1.7}
+#result .outfits{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+#result .outfit{border:1px solid #e9e4dc;border-radius:11px;padding:12px 10px;background:#f8f6f2;min-width:0}
+#result .outfit .emoji{font-size:18px;margin-bottom:7px}
+#result .outfit strong{font-size:12px;color:#42434a}
+#result .outfit p{font-size:11px;line-height:1.7;color:#7c7973;margin:6px 0 0}
+#result #nextAdvice{font-size:12px;line-height:1.95;color:#686a70;background:#f5f2ed;border-radius:12px;padding:13px}
+#result .report-section:last-child{margin-bottom:4px}
+@media(max-width:520px){
+ #result .report-cover{padding:20px 16px}
+ #result .report-avatar{width:76px;height:92px}
+ #result .report-grid{grid-template-columns:1fr}
+ #result .report-section{padding:15px 13px}
+ #result .report-section h4,#result .report-tile h4{font-size:18px}
+ #result .color-swatch .block{height:52px}
+ #result .color-swatch .label{font-size:9px}
+ #result .outfits{grid-template-columns:1fr}
+ #result .outfit{display:grid;grid-template-columns:26px 1fr;column-gap:8px}
+ #result .outfit .emoji{grid-row:span 2}
+ #result .outfit p{margin-top:3px}
+}
+
+</style>
+</head>
+<body>
+<header class="shell nav"><div class="brand"><span class="brand-mark">拾</span>拾色 <span style="font-weight:400;color:#9b9388;font-size:12px;letter-spacing:.06em">STYLE FINDER</span></div><div class="nav-note">PERSONAL COLOR · STYLE · WARDROBE</div></header>
+<main class="shell">
+<section class="hero"><div><div class="eyebrow">A little more you, every day</div><h1>穿得好看，<br><em>从认识自己开始。</em></h1><p>上传照片，回答几个关于你的小问题。用一份温柔、实用的个人风格报告，找到更适合你的颜色、穿衣方向与日常搭配灵感。</p><div class="hero-actions"><button class="primary" onclick="document.getElementById('quiz').scrollIntoView({behavior:'smooth'})">开始我的风格测试 ↗</button><span class="tiny">约 3 分钟 · 免费体验</span></div></div><div class="hero-art" aria-label="色彩灵感装饰"><div class="swatches"><i class="swatch" style="background:#d9b8a7"></i><i class="swatch" style="background:#b66f61"></i><i class="swatch" style="background:#7c8671"></i><i class="swatch" style="background:#d9c9a8"></i></div><div class="art-label"><strong>你的风格，不必复制别人</strong>让穿衣成为表达自己的方式</div></div></section>
+<section class="section"><div class="section-head"><div><div class="eyebrow">How it works</div><h2>从照片，到风格灵感</h2></div><p>不追求给你贴标签，而是帮你找到方向。</p></div><div class="steps"><article class="step-card"><div class="step-num">01 / YOUR PHOTO</div><h3>上传照片</h3><p>用自然光照片作为参考。照片质量会影响颜色判断。</p></article><article class="step-card"><div class="step-num">02 / YOUR TASTE</div><h3>回答问卷</h3><p>从喜欢的风格、穿衣习惯和日常困扰认识你的偏好。</p></article><article class="step-card"><div class="step-num">03 / YOUR REPORT</div><h3>生成风格报告</h3><p>获得初步色彩方向、风格关键词和可以尝试的穿搭建议。</p></article></div></section>
+<section class="section" id="quiz"><div class="section-head"><div><div class="eyebrow">Your style journey</div><h2>创建你的个人画像</h2></div><p>没有标准答案，选你真实喜欢的就好。</p></div>
+<div class="app-panel"><div class="panel-top"><h2 id="panelTitle">01. 一张照片，认识你</h2><span class="tiny" id="stepLabel">STEP 1 / 4</span></div><div class="progress-wrap"><div class="progress" id="progress"></div></div><div class="panel-body">
+<div class="step-view active" data-step="0"><p class="step-intro">如果方便，可以上传一张自然光正面照和一张全身穿搭照。也可以跳过照片，仅体验问卷版本。</p><div class="upload-grid"><label class="upload-box" id="faceBox"><input type="file" accept="image/*" id="faceInput"><img class="preview" id="facePreview" alt="正面照预览"><div class="upload-content"><div class="upload-icon">＋</div><strong>上传正面照（可选）</strong><span>自然光、无滤镜、面部无遮挡</span></div></label><label class="upload-box" id="bodyBox"><input type="file" accept="image/*" id="bodyInput"><img class="preview" id="bodyPreview" alt="全身照预览"><div class="upload-content"><div class="upload-icon">＋</div><strong>上传全身穿搭照（可选）</strong><span>尽量拍到完整穿搭与鞋子</span></div></label></div><div class="privacy-note"><span>♧</span><span><strong>照片隐私说明：</strong>照片默认只在当前页面预览。勾选下方授权后，生成报告时才会将所选照片发送至你配置的 AI 服务分析；不勾选也可以继续体验问卷报告。<label style="display:flex;gap:8px;align-items:flex-start;margin-top:9px;color:#514f48"><input id="aiConsent" type="checkbox" style="margin-top:5px;flex:0 0 auto"><span>我同意将本次选择的照片发送至 AI 服务，用于生成个人风格建议。</span></label></span></div><div class="field-label">你最希望改善什么？</div><div class="options" data-group="goal"><button class="option" data-value="找到适合自己的风格">找到适合自己的风格</button><button class="option" data-value="知道自己适合什么颜色">知道自己适合什么颜色</button><button class="option" data-value="找到适合自己的版型">找到适合自己的版型</button><button class="option" data-value="减少盲目购物">减少盲目购物</button></div></div>
+<div class="step-view" data-step="1"><p class="step-intro">风格没有高低之分。请选择你愿意在日常生活中尝试的感觉。</p><div class="field-label">哪些风格会让你心动？（可多选）</div><div class="options three" data-group="styles" data-multi="true"><button class="option" data-value="日系学院">日系学院<small>层次、自然、松弛</small></button><button class="option" data-value="简约复古">简约复古<small>经典、耐看、有细节</small></button><button class="option" data-value="韩系通勤">韩系通勤<small>利落、清爽、精致</small></button><button class="option" data-value="法式慵懒">法式慵懒<small>随性、柔和、不刻意</small></button><button class="option" data-value="自然休闲">自然休闲<small>舒适、轻松、实穿</small></button><button class="option" data-value="优雅女性化">优雅女性化<small>柔美、流畅、有气质</small></button><button class="option" data-value="街头潮流">街头潮流<small>个性、对比、表达感</small></button><button class="option" data-value="极简中性">极简中性<small>克制、干净、结构感</small></button><button class="option" data-value="学院知性">学院知性<small>衬衫、针织、书卷气</small></button></div><div class="field-label">你更喜欢什么样的整体感觉？</div><div class="options" data-group="mood"><button class="option" data-value="柔和低调">柔和低调<small>不抢眼，越看越舒服</small></button><button class="option" data-value="鲜明有个性">鲜明有个性<small>有记忆点，表达自我</small></button><button class="option" data-value="利落有结构">利落有结构<small>干净、清晰、精神</small></button><button class="option" data-value="轻松自然">轻松自然<small>舒适、不费力</small></button></div></div>
+<div class="step-view" data-step="2"><p class="step-intro">这些答案能帮助我们理解你的穿衣习惯，而不是单纯根据外貌做判断。</p><div class="field-label">你平时最常穿什么？</div><div class="options" data-group="daily"><button class="option" data-value="衬衫针织与长裤">衬衫、针织与长裤</button><button class="option" data-value="裙装与柔软面料">裙装与柔软面料</button><button class="option" data-value="牛仔裤与休闲单品">牛仔裤与休闲单品</button><button class="option" data-value="宽松廓形与叠穿">宽松廓形与叠穿</button></div><div class="field-label">买衣服时，你最在意什么？</div><div class="options" data-group="shopping"><button class="option" data-value="实用耐穿">实用耐穿<small>能穿很多年</small></button><button class="option" data-value="设计感">设计感<small>特别、有辨识度</small></button><button class="option" data-value="显气色与合身">显气色与合身<small>适合自己最重要</small></button><button class="option" data-value="性价比">性价比<small>预算内搭配更多</small></button></div><div class="field-label">你目前最大的困扰是什么？</div><div class="options" data-group="pain"><button class="option" data-value="买了衣服不会搭配">买了衣服不会搭配</button><button class="option" data-value="不知道什么颜色显气色">不知道什么颜色显气色</button><button class="option" data-value="喜欢的风格穿起来不对劲">喜欢的风格穿起来不对劲</button><button class="option" data-value="衣服很多但总觉得没得穿">衣服很多但总觉得没得穿</button></div></div>
+<div class="step-view" data-step="3"><p class="step-intro">最后，选择你希望报告优先解决的问题。我们会把答案整理成一份可以执行的初步建议。</p><div class="field-label">你最想先看到哪部分？</div><div class="options" data-group="priority"><button class="option" data-value="个人色彩">个人色彩<small>适合的颜色与配色</small></button><button class="option" data-value="风格方向">风格方向<small>找到适合自己的穿衣语言</small></button><button class="option" data-value="版型建议">版型建议<small>剪裁、比例与单品</small></button><button class="option" data-value="日常搭配">日常搭配<small>直接获得穿搭灵感</small></button></div><div class="privacy-note"><span>✦</span><span>报告是基于你填写的偏好生成的体验版，不是专业色彩诊断或身体测量结果。仅凭照片无法可靠确定肤色底调或季型。</span></div></div>
+<div class="error" id="error">请先选择一个选项，再继续。</div><div class="form-foot" id="formFoot"><button class="secondary" id="backBtn" onclick="prevStep()" disabled>上一步</button><div class="right"><button class="primary" id="nextBtn" onclick="nextStep()">继续 →</button></div></div>
+<div class="result" id="result">
+<div class="report-cover">
+  <div class="overline">YOUR PERSONAL COLOR & STYLE REPORT</div>
+  <img id="reportAvatar" class="report-avatar" alt="你的分析照片预览">
+  <h3><span id="seasonPrefix">你的风格画像</span><br><span id="styleTitle">日系学院 · 简约复古</span></h3>
+  <div class="report-en" id="styleEnglish">PERSONAL STYLE PROFILE</div>
+  <div class="report-badge" id="styleBadge">知性 · 松弛 · 耐看</div>
+  <p class="report-summary" id="styleDesc">从你偏好的穿衣语言出发，找到可以持续实践的个人风格。</p>
+  <div class="report-meta"><span id="reportMode">问卷分析</span><span id="reportConfidence">初步参考</span></div>
+</div>
+<div class="report-grid">
+  <div class="report-tile">
+    <div class="section-kicker">01 / STYLE DNA</div>
+    <h4>你的风格关键词</h4>
+    <div class="chips" id="styleChips"></div>
+    <p id="profileText" style="margin-top:12px">根据你的问卷偏好整理的风格画像。</p>
+  </div>
+  <div class="report-tile">
+    <div class="section-kicker">02 / COLOR DIRECTION</div>
+    <h4 id="colorTitle">低饱和 · 柔和 · 易搭配</h4>
+    <p id="colorDesc">目前为配色方向建议，不等同于确认的四季色彩诊断。</p>
+    <div class="confidence-note" id="colorConfidence">色彩判断需结合标准自然光照片或实物色布进一步确认。</div>
+  </div>
+</div>
+<div class="report-section">
+  <div class="section-kicker">03 / FIVE DIMENSIONS</div>
+  <h4>五维风格观察</h4>
+  <p>帮助你理解当前报告从哪些角度形成建议。问卷模式展示偏好倾向；照片模式可补充可见的色彩与穿搭观察。</p>
+  <div class="dimension-list" id="dimensionList">
+    <div class="dimension-row"><span>风格偏好</span><div class="dimension-track"><div class="dimension-fill" style="--w:72%"></div></div><span class="dimension-val">问卷倾向</span></div>
+    <div class="dimension-row"><span>日常适配</span><div class="dimension-track"><div class="dimension-fill" style="--w:66%"></div></div><span class="dimension-val">问卷倾向</span></div>
+    <div class="dimension-row"><span>色彩方向</span><div class="dimension-track"><div class="dimension-fill" style="--w:50%"></div></div><span class="dimension-val">待验证</span></div>
+    <div class="dimension-row"><span>版型方向</span><div class="dimension-track"><div class="dimension-fill" style="--w:50%"></div></div><span class="dimension-val">待验证</span></div>
+    <div class="dimension-row"><span>购物需求</span><div class="dimension-track"><div class="dimension-fill" style="--w:70%"></div></div><span class="dimension-val">问卷倾向</span></div>
+  </div>
+</div>
+<div class="report-section">
+  <div class="section-kicker">04 / SIGNATURE COLORS</div>
+  <h4>你的标志色灵感</h4>
+  <p>先从这组协调色开始搭配；它们是风格配色灵感，不代表已经确认这些颜色最衬你的肤色。</p>
+  <div class="color-strip" id="palette"></div>
+</div>
+<div class="report-section">
+  <div class="section-kicker">05 / COLOR STYLING GUIDE</div>
+  <h4>怎么把颜色穿进日常</h4>
+  <div class="color-advice-grid">
+    <div class="color-advice"><h5>优先尝试</h5><div class="color-dots" id="bestColorDots"></div><p id="bestColorText">先把主色放在上衣、针织或外套等容易观察的单品上。</p></div>
+    <div class="color-advice"><h5>搭配小技巧</h5><div class="color-dots" id="supportColorDots"></div><p id="supportColorText">用中性色做大面积基础，再用一处颜色或配饰增加层次。</p></div>
+  </div>
+</div>
+<div class="report-section">
+  <div class="section-kicker">06 / WHY THIS RESULT</div>
+  <h4>这份建议依据什么得出？</h4>
+  <div class="evidence-list" id="evidenceList">
+    <div class="evidence-item"><div class="evidence-icon">✓</div><div><strong>你的主动选择</strong><p>问卷中的风格偏好、穿衣习惯与购物需求。</p></div></div>
+    <div class="evidence-item"><div class="evidence-icon">◎</div><div><strong>需要进一步验证的部分</strong><p>肤色底调、季型和版型建议会受到照片质量与拍摄条件影响。</p></div></div>
+  </div>
+</div>
+<div class="report-section">
+  <div class="section-kicker">07 / WARDROBE STARTER</div>
+  <h4>衣橱里可以优先尝试的单品</h4>
+  <ul id="itemsList"></ul>
+</div>
+<div class="report-section">
+  <div class="section-kicker">08 / OUTFIT IDEAS</div>
+  <h4>三套日常搭配灵感</h4>
+  <div class="outfits" id="outfits"></div>
+</div>
+<div class="report-section">
+  <div class="section-kicker">09 / YOUR NEXT STEP</div>
+  <h4>接下来可以怎么做</h4>
+  <p id="nextAdvice"></p>
+</div>
+<div class="privacy-note"><span>ⓘ</span><span>这是一份偏好型体验报告，并非医疗、肤色测量或专业造型师的最终结论。颜色会受屏幕显示、环境光、相机白平衡与妆容影响。你可以把它当作尝试方向，而不是固定标签。</span></div><div class="result-actions"><button class="primary" onclick="downloadReport()">保存我的报告 ↓</button><button class="secondary" onclick="resetQuiz()">重新测试 ↻</button></div></div>
+</div></div></section>
+</main><footer class="shell footer"><div class="footer-inner"><div><strong style="color:var(--ink);letter-spacing:.12em">拾色 STYLE FINDER</strong><p>认识自己，再决定穿什么。</p></div><div>体验版 · 数据仅在当前页面处理<br>© 2026 拾色个人风格探索</div></div></footer>
+<script>
+const state={step:0,answers:{},photos:{},photoData:{}};
+const titles=['01. 一张照片，认识你','02. 你喜欢怎样的自己','03. 你的日常穿衣习惯','04. 生成你的风格画像'];
+const groups=document.querySelectorAll('[data-group]');
+groups.forEach(group=>group.addEventListener('click',e=>{const b=e.target.closest('.option');if(!b)return;const key=group.dataset.group,val=b.dataset.value;if(group.dataset.multi==='true'){b.classList.toggle('selected');state.answers[key]=[...group.querySelectorAll('.selected')].map(x=>x.dataset.value)}else{group.querySelectorAll('.option').forEach(x=>x.classList.remove('selected'));b.classList.add('selected');state.answers[key]=val}document.getElementById('error').style.display='none'}));
+function setupUpload(inputId,boxId,previewId,key){
+ const input=document.getElementById(inputId);
+ input.addEventListener('change',()=>{
+  const f=input.files&&input.files[0];if(!f)return;
+  if(!f.type.startsWith('image/'))return;
+  if(f.size>8*1024*1024){alert('单张照片请控制在 8MB 以内。');input.value='';return}
+  const url=URL.createObjectURL(f);
+  document.getElementById(previewId).src=url;
+  document.getElementById(boxId).classList.add('has-image');
+  state.photos[key]=f.name;
+  const reader=new FileReader();
+  reader.onload=()=>{state.photoData[key]=reader.result};
+  reader.readAsDataURL(f);
+ })
+}
+setupUpload('faceInput','faceBox','facePreview','face');setupUpload('bodyInput','bodyBox','bodyPreview','body');
+function showStep(){document.querySelectorAll('.step-view').forEach(v=>v.classList.toggle('active',Number(v.dataset.step)===state.step));document.getElementById('panelTitle').textContent=titles[state.step];document.getElementById('stepLabel').textContent=`STEP ${state.step+1} / 4`;document.getElementById('progress').style.width=((state.step+1)*25)+'%';document.getElementById('backBtn').disabled=state.step===0;document.getElementById('nextBtn').textContent=state.step===3?'生成我的报告 ✦':'继续 →';document.getElementById('error').style.display='none'}
+function nextStep(){const active=document.querySelector(`.step-view[data-step="${state.step}"]`);let required=active.querySelectorAll('[data-group]');let ok=true;required.forEach(g=>{if(g.dataset.group==='styles'){if(!(state.answers.styles||[]).length)ok=false}else if(!state.answers[g.dataset.group])ok=false});if(!ok){document.getElementById('error').style.display='block';return}if(state.step<3){state.step++;showStep()}else makeReport()}
+function prevStep(){if(state.step>0){state.step--;showStep()}}
+const palettes={
+'日系学院':['#293f50','#eee5d5','#9b594b','#89927c','#c9b38e'],
+'简约复古':['#5b3936','#d9c7a8','#3c4741','#a56d53','#e9dfcf'],
+'韩系通勤':['#d9c7b5','#343a3a','#8b8a7b','#a47d71','#f5efe6'],
+'法式慵懒':['#f1e7d7','#8d463e','#52634d','#c4a889','#30342e'],
+'自然休闲':['#7b876f','#e6dfcf','#b58b70','#344c4d','#c9c1b4'],
+'优雅女性化':['#b77c82','#e9d9d1','#777b8c','#9b795e','#f5ede4'],
+'街头潮流':['#252927','#d0ad59','#8d403a','#e8e1d6','#596777'],
+'极简中性':['#343a3a','#c7c0b4','#f2eee6','#77766f','#7e8983'],
+'学院知性':['#263f50','#f1e8d8','#9a4e43','#8c947b','#c8b89a']};
+async function makeReport(){document.querySelectorAll('.step-view').forEach(v=>v.classList.remove('active'));document.getElementById('formFoot').classList.add('hidden');document.getElementById('result').classList.add('active');document.getElementById('panelTitle').textContent='你的初步风格报告';document.getElementById('stepLabel').textContent='YOUR REPORT';document.getElementById('progress').style.width='100%';const styles=state.answers.styles||[];const lead=styles[0]||'简约复古';const second=styles[1]||'自然休闲';const mood=state.answers.mood||'轻松自然';const daily=state.answers.daily||'衬衫针织与长裤';const shopping=state.answers.shopping||'实用耐穿';const pain=state.answers.pain||'买了衣服不会搭配';const priority=state.answers.priority||'风格方向';document.getElementById('styleTitle').textContent=lead+' · '+second;document.getElementById('styleDesc').textContent=`以「${mood}」为主线，从熟悉的单品开始，逐渐建立自己的穿衣语言。`;document.getElementById('styleChips').innerHTML=[lead,second,mood].map(x=>`<span class="chip">${esc(x)}</span>`).join('');document.getElementById('keywordChips').innerHTML=[...new Set([...styles,mood,daily])].map(x=>`<span class="chip" style="background:#f3e8df">${esc(x)}</span>`).join('');document.getElementById('profileText').textContent=`你的问卷偏好更接近「${lead}」与「${second}」的组合。你在日常穿衣中偏向「${daily}」，购物时更在意「${shopping}」。这不是固定的人格标签，而是可以随着场景和心情变化的风格起点。当前最值得优先解决的是：${pain}。`;const colors=palettes[lead]||palettes['简约复古'];const names=['主色','基础色','点缀色','自然色','浅色'];document.getElementById('palette').innerHTML=colors.map((c,i)=>`<div class="color-swatch"><div class="block" style="background:${c}"></div><div class="label">${['主色灵感','柔和基础','沉稳辅助','自然点缀','浅色平衡'][i]}</div></div>`).join('');renderDots('bestColorDots',['主色','柔和色','点缀色'],colors.slice(0,3));renderDots('supportColorDots',['浅色','基础色','深色'],[colors[4]||'#eee9df','#8c8b82','#4e514d']);document.getElementById('bestColorText').textContent='先把主色放在上衣、针织或外套等容易观察的单品上；在自然光下对比不同颜色带来的整体感觉。';document.getElementById('supportColorText').textContent='用浅色和中性色做大面积基础，再用一处深色或配饰增加层次。';document.getElementById('colorConfidence').textContent='问卷模式只提供搭配灵感；照片分析也会受光线、白平衡和妆容影响，不能替代标准色布测试。';setReportMode();document.getElementById('colorTitle').textContent=lead==='韩系通勤'?'清爽 · 中性 · 克制':lead==='优雅女性化'?'柔和 · 流动 · 精致':lead==='街头潮流'?'鲜明 · 对比 · 个性':lead==='自然休闲'?'自然 · 大地 · 松弛':'低饱和 · 耐看 · 易搭';document.getElementById('itemsList').innerHTML=getItems(lead).map(x=>`<li>${esc(x)}</li>`).join('');const outfitData=[['☀️','日常基础搭配','选一件有质感的上衣，搭配直筒裤与舒适鞋履。'],['☕','周末出行搭配','用针织或轻外套增加层次，加入一个小面积点缀色。'],['✦','稍正式的搭配','通过利落的外套、简洁配饰和统一色调提升完整度。']];document.getElementById('outfits').innerHTML=outfitData.map(o=>`<div class="outfit"><div class="emoji">${o[0]}</div><strong>${o[1]}</strong><p>${o[2]}</p></div>`).join('');document.getElementById('nextAdvice').textContent=`你选择优先关注「${priority}」。建议先从衣橱中挑出 5 件最常穿、最喜欢的单品，观察它们共有的颜色、版型和材质；接下来每次购物前，先想清楚新单品能否与现有衣服搭配。照片没有经过标准光线校准，因此本报告只提供配色灵感，不会仅凭照片断定你的冷暖底调或四季型。`;document.getElementById('quiz').scrollIntoView({behavior:'smooth',block:'start'});
+ // The questionnaire report appears immediately; if the AI service is configured, it is then refined using the uploaded photos.
+ if((state.photoData.face || state.photoData.body) && document.getElementById('aiConsent')?.checked){runAIAnalysis().catch(err=>{console.warn('AI analysis unavailable:',err);document.getElementById('nextAdvice').textContent += ' 目前未能连接 AI 分析服务，以上仍是根据问卷生成的体验版结果。请确认已启动本地服务并配置 DEEPSEEK_API_KEY。'})}
+}
+
+async function runAIAnalysis(){
+ const payload={
+  photos:{face:state.photoData.face||null,body:state.photoData.body||null},
+  answers:state.answers
+ };
+ document.getElementById('nextAdvice').textContent='正在结合照片与问卷整理建议……请稍候。照片会发送至你配置的 AI 服务进行分析。';
+ const res=await fetch('/api/analyze-image',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});
+ if(!res.ok){const body=await res.json().catch(()=>({}));throw new Error(body.error||('HTTP '+res.status))}
+ const data=await res.json();
+ if(data.styleTitle)document.getElementById('styleTitle').textContent=data.styleTitle;
+ if(data.styleDesc)document.getElementById('styleDesc').textContent=data.styleDesc;
+ if(Array.isArray(data.styleChips))document.getElementById('styleChips').innerHTML=data.styleChips.map(x=>`<span class="chip">${esc(x)}</span>`).join('');
+ if(Array.isArray(data.keywords))document.getElementById('keywordChips').innerHTML=data.keywords.map(x=>`<span class="chip" style="background:#f3e8df">${esc(x)}</span>`).join('');
+ if(data.profileText)document.getElementById('profileText').textContent=data.profileText;
+ if(data.colorTitle)document.getElementById('colorTitle').textContent=data.colorTitle;
+ if(data.colorDesc)document.getElementById('colorDesc').textContent=data.colorDesc;
+ if(Array.isArray(data.palette) && data.palette.length){document.getElementById('palette').innerHTML=data.palette.slice(0,5).map((p,i)=>`<div class="color-swatch"><div class="block" style="background:${safeHex(p.hex)}"></div><div class="label">${esc(p.name||('颜色'+(i+1)))}</div></div>`).join('');renderDots('bestColorDots',data.bestColors||data.palette.slice(0,3).map(p=>p.name),data.palette.slice(0,3).map(p=>p.hex));renderDots('supportColorDots',data.supportColors||data.palette.slice(2,5).map(p=>p.name),data.palette.slice(2,5).map(p=>p.hex))}
+ if(data.bestColorText)document.getElementById('bestColorText').textContent=data.bestColorText;
+ if(data.supportColorText)document.getElementById('supportColorText').textContent=data.supportColorText;
+ if(data.confidence){document.getElementById('reportConfidence').textContent=data.confidence;document.getElementById('colorConfidence').textContent=data.confidence}
+ if(Array.isArray(data.evidence))document.getElementById('evidenceList').innerHTML=data.evidence.map((e,i)=>`<div class="evidence-item"><div class="evidence-icon">${i===0?'✓':'◎'}</div><div><strong>${esc(e.title||'分析依据')}</strong><p>${esc(e.detail||'')}</p></div></div>`).join('');
+ if(Array.isArray(data.dimensionNotes))document.getElementById('dimensionList').innerHTML=data.dimensionNotes.slice(0,5).map(d=>`<div class="dimension-row"><span>${esc(d.label||'观察维度')}</span><div class="dimension-track"><div class="dimension-fill" style="--w:${Math.max(10,Math.min(100,Number(d.value)||50))}%"></div></div><span class="dimension-val">${esc(d.note||'参考')}</span></div>`).join('');
+ if(Array.isArray(data.items))document.getElementById('itemsList').innerHTML=data.items.map(x=>`<li>${esc(x)}</li>`).join('');
+ if(data.nextAdvice)document.getElementById('nextAdvice').textContent=data.nextAdvice;
+}
+function renderDots(targetId,names,colors){const el=document.getElementById(targetId);if(!el)return;el.innerHTML=(names||[]).slice(0,4).map((n,i)=>`<span title="${esc(n)}" class="color-dot-small" style="background:${safeHex((colors||[])[i])}" aria-label="${esc(n)}"></span>`).join('')}
+function setReportMode(){const mode=document.getElementById('reportMode');if(mode)mode.textContent=(state.photoData.face||state.photoData.body)?'照片 + 问卷':'问卷分析';const avatar=document.getElementById('reportAvatar');if(avatar&&state.photoData.face){avatar.src=state.photoData.face;avatar.style.display='block'}else if(avatar){avatar.removeAttribute('src');avatar.style.display='none'}const conf=document.getElementById('reportConfidence');if(conf)conf.textContent=(state.photoData.face||state.photoData.body)?'AI 初步观察':'基于问卷偏好'}
+function safeHex(v){return /^#[0-9a-fA-F]{6}$/.test(String(v||''))?v:'#d9c7b5'}
+
+function getItems(style){const common=['一件版型合适、肩线清晰的外套','一条适合自己身高比例的直筒长裤或半裙','两到三件能互相搭配的基础上衣'];const extra={'日系学院':['衬衫、针织背心或轻薄开衫','乐福鞋、帆布鞋与简洁帆布包'],'简约复古':['有质感的针织衫或复古衬衫','棕色皮带、简洁皮鞋或复古小包'],'韩系通勤':['线条利落的西装外套或短外套','低调耳饰、简洁单肩包'],'法式慵懒':['柔软衬衫、细针织与自然垂坠的下装','低跟鞋、轻薄丝巾或小巧金属配饰'],'自然休闲':['棉麻衬衫、舒适针织和轻便外套','平底鞋、帆布包或自然材质配饰'],'优雅女性化':['垂坠感上衣、合身针织或A字裙','简洁项链、低跟鞋与柔和色包袋'],'街头潮流':['宽松外套、结构感裤装或图案单品','用帽子、鞋或包选一个重点表达个性'],'极简中性':['线条清晰的衬衫、直筒裤与简洁外套','少量金属配饰和轮廓利落的鞋'],'学院知性':['牛津纺衬衫、细针织与直筒长裤','乐福鞋、皮带与结构感托特包']};return [...common,...(extra[style]||extra['简约复古'])]}
+function esc(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function downloadReport(){const text=`拾色｜个人风格初步报告\n\n风格组合：${document.getElementById('styleTitle').textContent}\n色彩方向：${document.getElementById('colorTitle').textContent}\n\n风格画像：\n${document.getElementById('profileText').textContent}\n\n建议单品：\n${[...document.querySelectorAll('#itemsList li')].map(x=>'• '+x.textContent).join('\n')}\n\n下一步建议：\n${document.getElementById('nextAdvice').textContent}\n\n说明：本报告基于自填偏好生成，属于风格探索参考，不是专业色彩诊断。`;const blob=new Blob([text],{type:'text/plain;charset=utf-8'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download='拾色-个人风格报告.txt';a.click();URL.revokeObjectURL(url)}
+function resetQuiz(){state.step=0;state.answers={};document.querySelectorAll('.option').forEach(b=>b.classList.remove('selected'));document.getElementById('result').classList.remove('active');document.getElementById('formFoot').classList.remove('hidden');['faceBox','bodyBox'].forEach(id=>document.getElementById(id).classList.remove('has-image'));['faceInput','bodyInput'].forEach(id=>document.getElementById(id).value='');['facePreview','bodyPreview'].forEach(id=>document.getElementById(id).src='');state.photos={};state.photoData={};if(document.getElementById('aiConsent'))document.getElementById('aiConsent').checked=false;showStep();document.getElementById('quiz').scrollIntoView({behavior:'smooth'})}
+showStep();
+</script>
+</body>
+</html>

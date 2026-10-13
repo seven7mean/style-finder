@@ -1,0 +1,12 @@
+{
+  "name": "style-finder-deepseek",
+  "version": "1.0.0",
+  "private": true,
+  "description": "拾色个人风格测试网页原型与 DeepSeek 视觉分析后端",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
